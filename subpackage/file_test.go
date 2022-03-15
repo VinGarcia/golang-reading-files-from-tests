@@ -6,7 +6,7 @@ import (
 )
 
 func TestHelloWorld(t *testing.T) {
-	configFile, err := rootpkg.ReadFile("config/env")
+	configFile, err := rootpkg.RootFS.ReadFile("config/env")
 	if err != nil {
 		t.Fatalf("unable to open config/env file: %s", err)
 	}
